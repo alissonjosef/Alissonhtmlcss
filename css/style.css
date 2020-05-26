@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
 /* soft reset do css */
 * {
     margin: 0;
@@ -9,7 +10,7 @@
 body {
     background-image: url("../img/fundo.jpg");
     background-size: auto 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-family: 'Roboto Mono', monospace;
     height: 100vh;/* Tamanho da pagina total*/
     font-size: 12px;
 }
@@ -26,6 +27,12 @@ body {
         font-size: 18px;
     }
 }
+/* breakpoint */
+@media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+  }
 
 header {
     height: 100vh;
@@ -73,17 +80,61 @@ a:hover {
 
 /* Deixar o tamanho da font automantica para grande e pequeno */
 /* Unidades relativas em*/
-.site-subtitle {
+.site-title {
     font-size: 4em;
+    font-family: 'Yesteryear', cursive;
 }
 
 .site-subtitle {
     font-style: italic;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.8em;/*Altura de linha */
+    
+}
+.portfolio {
+   /* background: pink;*/ 
+    padding: 2em;
+    height: 100vh;
+}
+
+.portfolio h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: whitesmoke;
+    margin-bottom: 1.5em; /*Margin um espaço para H1*/
+    font-size: 2em; /* Tamanho a fonte */
+
+}
+
+.portfolio .grid {
+display: grid; /* Criar Coluna ou Linha */
+gap: 2em; /* Distanciar um objeto um do outro*/
+}
+
+/* Ajuste de tela */
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 250px 250px;/* Criando quantidade de colunas */
+        }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 260px);/* Criando quantidade de colunas */
+        align-content: center;
+        justify-content: center; /* Centralizar todo o conteudo */
+        height: calc(100vh - 8em  - 48px);
+        }
+}
+
+.portfolio figure {
+    text-align: center; /* Centralizar Fonte */
 }
 
 .img-portfolio {
-    width: 180px;
     height: 180px;
-
+    width: 250px;
+    object-fit: cover ; /* Função de deixar todo o material do mesmo tamanho */ 
+    object-position: left bottom;
+    border-radius: 5%;
 }
 
