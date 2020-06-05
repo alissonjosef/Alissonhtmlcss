@@ -91,12 +91,13 @@ a:hover {
     line-height: 1.8em;/*Altura de linha */
     
 }
+.contato,
 .portfolio {
    /* background: pink;*/ 
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
 }
-
+.contato h2,
 .portfolio h2 {
     font-family: 'Roboto Mono', monospace;
     color: whitesmoke;
@@ -137,4 +138,21 @@ gap: 2em; /* Distanciar um objeto um do outro*/
     object-position: left bottom;
     border-radius: 5%;
 }
+.contato .icons {
+    text-align: center;
+}
 
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+}
+
+.contato a:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 560px) {
+    .contato .grid {
+        grid-template-columns: 250px 250px;/* Criando quantidade de colunas */
+        }
+}
